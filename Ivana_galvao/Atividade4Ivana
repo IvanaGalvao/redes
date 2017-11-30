@@ -1,0 +1,94 @@
+Ivana Santos Galvao
+421
+
+
+root     21899  0.0  0.0  16124  3780 ?        S    19:57   0:00 /sbin/dhclient -d -q -sf /usr/lib/NetworkManager/nm-dhcp-helper -pf /var/run/dhclient-wls2.pid -lf /var/lib/NetworkManager/dhclient-574c0158-aa57-4f65-9cd3-091b3ef62bbb-wls2.lease -cf /var/lib/NetworkManager/dhclient-wls2.conf wls2
+alunos   22143  0.0  0.0  14252  1016 pts/2    S+   20:08   0:00 grep --color=auto dhclient
+
+Tabela de Roteamento IP do Kernel
+Destino         Roteador        MáscaraGen.    Opções Métrica Ref   Uso Iface
+10.0.0.0        0.0.0.0         255.0.0.0       U     0      0        0 wls2
+
+wls2      Link encap:Ethernet  Endereço de HW 1c:65:9d:71:b7:6a  
+          inet end.: 10.17.8.0  Bcast:10.255.255.255  Masc:255.0.0.0
+          endereço inet6: fe80::2c7f:21c4:dc85:e43c/64 Escopo:Link
+          UP BROADCAST RUNNING MULTICAST  MTU:1500  Métrica:1
+          pacotes RX:156733 erros:0 descartados:0 excesso:0 quadro:0
+          Pacotes TX:37117 erros:0 descartados:0 excesso:0 portadora:0
+          colisões:0 txqueuelen:1000 
+          RX bytes:65112068 (65.1 MB) TX bytes:4295859 (4.2 MB)
+
+wls2      Link encap:Ethernet  Endereço de HW 1c:65:9d:71:b7:6a  
+          inet end.: 10.17.9.180  Bcast:10.17.15.255  Masc:255.255.248.0
+          BROADCAST MULTICAST  MTU:1500  Métrica:1
+          pacotes RX:215173 erros:0 descartados:0 excesso:0 quadro:0
+          Pacotes TX:51878 erros:0 descartados:0 excesso:0 portadora:0
+          colisões:0 txqueuelen:1000 
+          RX bytes:78711172 (78.7 MB) TX bytes:6610229 (6.6 MB)
+
+1. O default gateway é a porta de entrada e saída da rede onde o  roteador possui o link de Internet e é o responsável por rotear o tráfego dos demais hosts da rede para a Internet e vice-versa
+
+2.Se a rede Ethernet e seu roteador tomam suas decisões de distribuição do fluxo de dados ou switching basedos nos endereços de hardware, ter MACs duplicados envolvidos vai ser motivo de confusão 
+
+3.# Updated from http://www.iana.org/assignments/port-numbers and other
+# sources like http://www.freebsd.org/cgi/cvsweb.cgi/src/etc/services .
+http		80/tcp		www		# WorldWideWeb HTTP
+http		80/udp				# HyperText Transfer Protocol
+https		443/tcp				# http protocol over TLS/SSL
+https		443/udp
+http-alt	8080/tcp	webcache	# WWW caching service
+http-alt	8080/udp
+
+pop3		110/tcp		pop-3		# POP version 3
+pop3		110/udp		pop-3
+pop3s		995/tcp				# POP-3 over SSL
+pop3s		995/udp
+
+ssh		22/tcp				# SSH Remote Login Protocol
+ssh		22/udp
+
+telnet		23/tcp
+rtelnet		107/tcp				# Remote Telnet
+rtelnet		107/udp
+telnets		992/tcp				# Telnet over SSL
+telnets		992/udp
+tfido		60177/tcp			# fidonet EMSI over telnet
+
+nntp		119/tcp		readnews untp	# USENET News Transfer Protocol
+nntps		563/tcp		snntp		# NNTP over SSL
+nntps		563/udp		snntp
+
+ftp-data	20/tcp
+ftp		21/tcp
+tftp		69/udp
+sftp		115/tcp
+ftps-data	989/tcp				# FTP over SSL (data)
+ftps		990/tcp
+venus-se	2431/udp			# udp sftp side effect
+codasrv-se	2433/udp			# udp sftp side effect
+gsiftp		2811/tcp
+gsiftp		2811/udp
+frox		2121/tcp			# frox: caching ftp proxy
+zope-ftp	8021/tcp			# zope management by ftp
+
+
+4.Porque faz referência ao sistema de envio de pacotes mais comum da internet. Ao acessar um site, seu computador manda dados ao servidor pedindo que ele envie os conteúdos da página à máquina que está sendo utilizada — as informações enviadas de volta são “costuradas” pelo seu navegador para mostrar aquilo que você deseja.
+
+5.[sudo] senha para alunos: 
+Conexões Internet Ativas (somente servidores)
+Proto Recv-Q Send-Q Endereço Local          Endereço Remoto         Estado      
+tcp        0      0 alunos-HP-Compaq:domain *:*                     OUÇA      
+tcp        0      0 *:ssh                   *:*                     OUÇA      
+tcp        0      0 *:6653                  *:*                     OUÇA      
+tcp6       0      0 [::]:http               [::]:*                  OUÇA      
+tcp6       0      0 [::]:ssh                [::]:*                  OUÇA      
+
+Conexões Internet Ativas (somente servidores)
+Proto Recv-Q Send-Q Endereço Local          Endereço Remoto         Estado      
+udp        0      0 alunos-HP-Compaq:domain *:*                                
+udp        0      0 *:bootpc                *:*                                
+udp        0      0 *:49251                 *:*                                
+udp        0      0 *:ipp                   *:*                                
+udp        0      0 *:mdns                  *:*                                
+udp6       0      0 [::]:34593              [::]:*                             
+udp6       0      0 [::]:mdns               [::]:* 
