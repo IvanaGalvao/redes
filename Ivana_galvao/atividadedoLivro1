@@ -1,0 +1,56 @@
+Ivana Santos Galvão
+TS 421 
+REDES
+		  Atividades Livro Kurose
+Questão1
+Seção4.1 
+Questão 1. O nome de um pacote de camadas de redes é datagrama.Na camada de enlace ocomputador de pacotes é um switches para rede local ou ethernet e o roteador conectar os computadores diretamnete a internte atraves de chaveamento intermediario.
+
+
+Seção 4.4
+Questão 12. Sim. O número de endereços IPs é igual ao número de interfaces.
+
+Questão 13. 11011111.00000001.00000011.00011011 
+
+Questão14. Ip: 10.17.9.112
+Mascara:255.255.248.0
+Roteador: não achei 
+Interface:802.11.wifi (Wls2)
+Primry Dns:10.17.10.10
+Secundary Dns:8.8.8.8
+Rota padrao:10.17.10.220
+
+Questão18. O roteador sem fio usa NAT e os endereços IPs podem ser atribuídos aos computadores através do DHCP
+
+Questão19.
+IPV4
+Endereço de 32bits
+Suporte opcional de IPSec
+Nenhuma referência a capacidade de QoS (Quality of Service) 
+Processo de fragmentação realizada pelo router
+O cabeçalho inclui os campos de opção
+O Adress Resolution Protocol (ARP), utiliza requisitos do tipo Broadcast 
+Internet Resolution Management Protocol (IGMP) é utilizado para gerir relações locais de sub-redes
+Os Endereços de Broadcast são utilizados para enviar tráfego para todos os host de uma rede 
+O endereço tem de ser configurado manualmente
+uporta pacotes de 576 bytes, passiveis de serem fragmentados
+
+IPV6
+Endereço de 128bits
+Suporte obrigatório de IPSec
+Introduz capacidades de QoS utilizando para isso o campo Flow Label
+A fragmentação deixa de ser realizada pelos routers e passa a ser processada pelos host emissores
+Todos os campos de opção foram mudados para dentro do campo extension header
+O ARP foi abandonado, sendo substituídos pelas mensagens Neibhbor Discovery
+O IGMP fio substituído por mensagens Multcast Listner Discovery
+Deixa de existir o endereço de Broadcast, para utilizar endereços multicast 
+Adição de funcionalidades de autoconfiguração 
+Suporta pacotes de 1280 bytes, sem fragmentação
+
+Comparacao: A única coisa em comum é o suporte ao IPSec sendo em um apcional e em outro obrigatorio.
+
+Questão2. No algoritmo de roteamento estatico as rotas mudam muito lentamente ao longo do tempo , muitas vezes como resultados de intervencao humana por exe. uma pessoa editando manualmente a tabela de repasse de do roteador.
+Ja no algoritmo de roteamento dinamicos mudam os caminhos de reteamento  á medida que mudam as cargas de trafego ou de topologia ou de custo dos enlaces. Sao mais sensiveis a a mudancas na rede e mais sucetiveis a problemas como loops de roteamento e oscilaçao em rotas 
+
+Questão3. O algoritmo de Dijkstra foi desenvolvido por Edsger Wybe Dijkstra em 1959.Este algoritmo tem por função encontrar o caminho mais curto entre duas arestas dentro de um grafo. Para definição deste caminho mínimo é necessário que cada aresta possua um peso positivo, onde cada aresta deve possuir uma métrica para que o algoritmo possa encontrar um caminho onde a soma dos pesos das arestas seja o mais baixo entre todos os caminhos possíveis entre os pontos.Dentro de uma rede de dados sem-fio, para um melhor desempenho do serviço de roteamento é extremamente necessário a definição de uma métrica que irá gerar um valor para cada nó pertencente à rede. Esta métrica será o valor pelo qual o algoritmo de Dijsktra utilizará para a definição do caminho de menor custo entre o ponto inicial e o ponto final. Este métrica poderá ser qualquer valor como congestionamento, taxa de perda ou velocidade.Com o valor de custo definido como infinito, o vizinho de menor valor passa a ser considerado como ponto inicial e os seus vizinhos são analisados iniciando-se um loop que verificará todos os vértices até que sejam levantados os caminhos de custos mais baixos.O algoritmo de Dijikstra finaliza o seu processo quando o número total dos caminhos curtos pesquisados for igual ao número de vértices disponibilizados no grafo.
+
